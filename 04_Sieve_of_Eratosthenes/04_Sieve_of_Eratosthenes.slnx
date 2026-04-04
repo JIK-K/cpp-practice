@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="04_Sieve_of_Eratosthenes/04_Sieve_of_Eratosthenes.vcxproj" />
+</Solution>
