@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="06_QuickSort/06_QuickSort.vcxproj" Id="7e58c384-0242-4624-ad3c-5d5693d14541" />
+  <Project Path="07_.File_inut_output/07_.File_inut_output.vcxproj" Id="5db47f59-edb5-4268-a8be-41669cb4c69e" />
 </Solution>
