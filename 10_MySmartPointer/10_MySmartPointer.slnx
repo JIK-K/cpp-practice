@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="09_Queue/09_Queue.vcxproj" Id="0990815a-94a5-40b9-a19a-a7324ce0ffd8" />
+  <Project Path="10_MySmartPointer/10_MySmartPointer.vcxproj" Id="46473cf4-3a3a-40d5-8b2a-46b7ab3da41d" />
 </Solution>
