@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MyList.hpp">
+    <ClInclude Include="MyStack.hpp">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{12fcccb7-c1cd-4dfb-88c6-c6f8745c5efd}</ProjectGuid>
-    <RootNamespace>My02list</RootNamespace>
+    <ProjectGuid>{3b3a9b0b-f0f7-4ed2-a80b-7ab49aa4fdae}</ProjectGuid>
+    <RootNamespace>My08stack</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="MyList.hpp" />
+    <ClInclude Include="MyStack.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
