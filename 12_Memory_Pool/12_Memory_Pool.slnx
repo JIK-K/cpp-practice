@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="05_Queue/05_Queue.vcxproj" />
+  <Project Path="12_Memory_Pool/12_Memory_Pool.vcxproj" />
 </Solution>

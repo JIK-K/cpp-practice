@@ -93,6 +93,7 @@ enum class Priority {
 
 static std::mutex count_mtx;
 
+
 struct Task {
 	int id;
 	Priority priority;
@@ -110,6 +111,8 @@ private:
 	std::condition_variable _cv;
 	std::atomic<bool> _done{ false };
 	std::vector<std::thread> _workers;
+	std::atomic<int> _completed{ 0 };
+	int _total = 0;
 
 	void workerLoop() {
 		while (true) {
@@ -126,6 +129,8 @@ private:
 				_queue.pop(); 
 			}
 			task.job(task.id, task.priority);
+			_completed++;
+			this->_cv.notify_all();
 		}
 	}
 public:
@@ -147,6 +152,7 @@ public:
 		// Task 추가
 		std::unique_lock<std::mutex> lock(_mtx);
 		this->_queue.push({ id, priority, job });
+		_total++;
 		_cv.notify_one();
 	}
 		
@@ -154,18 +160,23 @@ public:
 		this->_done = true;
 		this->_cv.notify_all();
 	}
+
+	void waiting() {
+		std::unique_lock<std::mutex> lock(_mtx);
+		_cv.wait(lock, [this]() {
+			return _completed == _total;
+		});
+	}
 };
 
 void printTask(int a, Priority priority) {
 	std::lock_guard<std::mutex> lock(count_mtx);
 	std::cout << "[Thread " << std::this_thread::get_id() << "] Task - " << a << "Priority - " << static_cast<int>(priority) << std::endl;
 
-	// 작업 시간이 제각각이라고 가정 (시뮬레이션)
-	std::this_thread::sleep_for(std::chrono::milliseconds(1000 + (rand() % 500)));
 }
 
 int main() {
-	PriorityScheduler ps(10);
+	PriorityScheduler ps(3);
 	std::random_device rd;
 	std::mt19937 gen(rd());
 	std::uniform_int_distribution<int> dis(0, 2);
@@ -174,6 +185,9 @@ int main() {
 
 		ps.submit(i, priority, printTask);
 	}
+
+	ps.waiting();
+	ps.shutdown();
 
 	return 0;
 }
