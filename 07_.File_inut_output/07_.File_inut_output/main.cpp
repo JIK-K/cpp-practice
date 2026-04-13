@@ -14,21 +14,21 @@ static mutex mtx;
 void saveRecord();
 
 void startRecord() {
-    if (recordThread.joinable()) return; // 이미 스레드 실행 중이면 시작 x
+    if (recordThread.joinable()) return; 
     isRecording = true;
-    recordThread = thread(saveRecord);   // 녹화 스레드 시작
+    recordThread = thread(saveRecord); 
 }
 
 void saveRecord() {
-    ofstream file("data.rec", ios::app); // 기존 파일 뒤에 이어쓰기
+    ofstream file("data.rec", ios::app);
 
     while (true) {
-        Sleep(1000); // 1초 대기
+        Sleep(1000); 
         mtx.lock();
 
-        if (!isRecording || remainTime <= 0) { // 녹화 꺼지거나 시간 다 되면
+        if (!isRecording || remainTime <= 0) { 
             isRecording = false;
-            mtx.unlock(); // break 전에 반드시 unlock
+            mtx.unlock(); 
             break;
         }
 
@@ -57,11 +57,11 @@ void setRemainTime() {
     mtx.unlock();
 
     if (sec > 0)
-        startRecord(); // 양수면 녹화 시작
+        startRecord(); 
 }
 
 int main() {
-    ofstream initFile("data.rec"); // 시작 시 파일 새로 생성 (덮어쓰기)
+    ofstream initFile("data.rec"); 
     initFile.close();
 
     int choice;
@@ -95,10 +95,10 @@ int main() {
             break;
         case 4:
             mtx.lock();
-            isRecording = false;     // 녹화 중이면 강제 종료
+            isRecording = false;     
             mtx.unlock();
             if (recordThread.joinable())
-                recordThread.join(); // 스레드 끝날 때까지 대기
+                recordThread.join(); 
             cout << "종료" << endl;
             break;
         default:

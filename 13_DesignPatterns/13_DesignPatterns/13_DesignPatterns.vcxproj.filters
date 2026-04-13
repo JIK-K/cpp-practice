@@ -22,6 +22,12 @@
     <Filter Include="헤더 파일\Strategy">
       <UniqueIdentifier>{55305ef0-d420-47c1-acfb-c9d51a8d5688}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\State">
+      <UniqueIdentifier>{b55cf777-f150-4128-94f1-14cc7cf76236}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\state">
+      <UniqueIdentifier>{f1bcc68c-de31-45ee-b0bc-d5c6bee92aa2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Logger.hpp">
@@ -54,6 +60,18 @@
     <ClInclude Include="Sorter.hpp">
       <Filter>헤더 파일\Strategy</Filter>
     </ClInclude>
+    <ClInclude Include="YellowState.hpp">
+      <Filter>헤더 파일\State</Filter>
+    </ClInclude>
+    <ClInclude Include="GreenState.hpp">
+      <Filter>헤더 파일\State</Filter>
+    </ClInclude>
+    <ClInclude Include="RedState.hpp">
+      <Filter>헤더 파일\State</Filter>
+    </ClInclude>
+    <ClInclude Include="TrafficLight.hpp">
+      <Filter>헤더 파일\State</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -64,6 +82,24 @@
     </ClCompile>
     <ClCompile Include="testObserver.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="testStrategy.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="IState.hpp">
+      <Filter>헤더 파일\State</Filter>
+    </ClCompile>
+    <ClCompile Include="testState.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="RedState.cpp">
+      <Filter>소스 파일\state</Filter>
+    </ClCompile>
+    <ClCompile Include="YellowState.cpp">
+      <Filter>소스 파일\state</Filter>
+    </ClCompile>
+    <ClCompile Include="GreenState.cpp">
+      <Filter>소스 파일\state</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

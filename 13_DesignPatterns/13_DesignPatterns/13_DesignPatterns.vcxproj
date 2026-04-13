@@ -129,19 +129,29 @@
   <ItemGroup>
     <ClInclude Include="BubbleSort.hpp" />
     <ClInclude Include="CoolingFan.hpp" />
+    <ClInclude Include="GreenState.hpp" />
     <ClInclude Include="IObserver.hpp" />
     <ClInclude Include="ISortStrategy.hpp" />
     <ClInclude Include="ISubject.hpp" />
     <ClInclude Include="Logger.hpp" />
     <ClInclude Include="QuickSort.hpp" />
+    <ClInclude Include="RedState.hpp" />
     <ClInclude Include="Sorter.hpp" />
     <ClInclude Include="TemperatureSensor.hpp" />
+    <ClInclude Include="TrafficLight.hpp" />
     <ClInclude Include="WarningLight.hpp" />
+    <ClInclude Include="YellowState.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="GreenState.cpp" />
+    <ClCompile Include="IState.hpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="RedState.cpp" />
     <ClCompile Include="testObserver.cpp" />
     <ClCompile Include="testSingleton.cpp" />
+    <ClCompile Include="testState.cpp" />
+    <ClCompile Include="testStrategy.cpp" />
+    <ClCompile Include="YellowState.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
