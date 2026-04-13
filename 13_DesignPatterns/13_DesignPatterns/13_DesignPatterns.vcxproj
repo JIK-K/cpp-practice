@@ -127,10 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BubbleSort.hpp" />
     <ClInclude Include="CoolingFan.hpp" />
     <ClInclude Include="IObserver.hpp" />
+    <ClInclude Include="ISortStrategy.hpp" />
     <ClInclude Include="ISubject.hpp" />
     <ClInclude Include="Logger.hpp" />
+    <ClInclude Include="QuickSort.hpp" />
+    <ClInclude Include="Sorter.hpp" />
     <ClInclude Include="TemperatureSensor.hpp" />
     <ClInclude Include="WarningLight.hpp" />
   </ItemGroup>

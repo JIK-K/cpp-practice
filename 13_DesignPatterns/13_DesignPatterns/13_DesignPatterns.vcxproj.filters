@@ -19,6 +19,9 @@
     <Filter Include="헤더 파일\Observer">
       <UniqueIdentifier>{ecd9dd2e-cf58-4f5b-8fa7-09348adac755}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\Strategy">
+      <UniqueIdentifier>{55305ef0-d420-47c1-acfb-c9d51a8d5688}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Logger.hpp">
@@ -38,6 +41,18 @@
     </ClInclude>
     <ClInclude Include="WarningLight.hpp">
       <Filter>헤더 파일\Observer</Filter>
+    </ClInclude>
+    <ClInclude Include="ISortStrategy.hpp">
+      <Filter>헤더 파일\Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="QuickSort.hpp">
+      <Filter>헤더 파일\Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="BubbleSort.hpp">
+      <Filter>헤더 파일\Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="Sorter.hpp">
+      <Filter>헤더 파일\Strategy</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
