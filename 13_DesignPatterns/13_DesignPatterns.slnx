@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="12_Memory_Pool/12_Memory_Pool.vcxproj" Id="68e27b43-e3c9-453b-81a4-d405415f246d" />
+  <Project Path="13_DesignPatterns/13_DesignPatterns.vcxproj" />
 </Solution>
